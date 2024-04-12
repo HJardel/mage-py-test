@@ -1,0 +1,92 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: old brook
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: old_brook
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - laod_test_histogram_e1
+  - serene_crafter
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: laod test
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: laod_test
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: serene crafter
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - laod_test
+  uuid: serene_crafter
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-04-12 03:05:14.287244+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: drexel shared files test
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: drexel_shared_files_test
+variables_dir: C:\Users\ranli/.mage_data\mage-py-test
+widgets:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    buckets: 10
+    chart_type: histogram
+    x: x
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: laod_test_histogram_e1
+  retry_config: null
+  status: failed
+  timeout: null
+  type: chart
+  upstream_blocks:
+  - laod_test
+  uuid: laod_test_histogram_e1
